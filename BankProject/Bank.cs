@@ -62,6 +62,7 @@
                 throw new ArgumentException("Már létezik számla ezzel a számlaszámmal!",nameof(szamlaszam));
             }
             Szamla ujszamla = new Szamla(nev,szamlaszam);
+            szamlak.Add(ujszamla);
 			//throw new NotImplementedException();
 		}
 

@@ -61,11 +61,11 @@ namespace TestBankprojekt
 		}
 
 		[Test]
-		public void UjSzamla_LetezoNevvel_ArgumenExceptiontDob()
+		public void UjSzamla_LetezoNevvel_NemDobKivetelt()
 		{
 			Bank bank = new Bank();
 			bank.UjSzamla("Gipsz Jakab", "1234");
-			Assert.Throws<ArgumentException>(() => bank.UjSzamla("Teszt Elek", "1234"));
+			Assert.DoesNotThrow(() => bank.UjSzamla("Gipsz Jakab", "4321"));
 		}
 
 	}
